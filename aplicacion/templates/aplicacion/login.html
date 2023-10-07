@@ -1,0 +1,18 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block tituo %}
+    Ingresar
+{% endblock tituo %}
+
+
+{% block contenido %}
+    <h2>Ingresar</h2>
+    <form action = "" method = 'post'>
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" value = "Enviar">
+    </form>
+{% endblock contenido %}
